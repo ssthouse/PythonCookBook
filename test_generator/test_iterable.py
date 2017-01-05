@@ -5,8 +5,6 @@
 # 从下面对于 list 测试来看, 加了 enumerate  iterate 出来的数据多一个 index, 然后是 value
 # enumerate 实现了类似于一个枚举的功能, 使可迭代对象多一个 index, 即迭代 enumerate 对象得到的是(index, value)
 # 测试 enumerate 内建方法
-from test_generator.demo_iterable import demo_iterable
-
 
 def test_enumerate():
     my_str = 'abc'
@@ -40,14 +38,4 @@ def test_iter():
             print("stop iteration")
             break
 
-
 # test_iter()
-
-# 测试在 demo_iterable 自定义的 iterable 类
-def test_self_def_iterable():
-    iterable = demo_iterable()
-    for value in iterable:
-        print(value)
-
-
-test_self_def_iterable()

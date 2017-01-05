@@ -18,4 +18,13 @@ class demo_iterable(object):
     # 实现迭代器接口, 使其可被 for in 调用
     # 创建自身 并返回
     def __iter__(self):
+        print("hahaha")
         return demo_iterable()
+
+
+# 测试在 demo_iterable 自定义的 iterable 类
+def test_self_def_iterable():
+    iterable = demo_iterable()
+    for value in iterable:
+        print(value)
+test_self_def_iterable()
